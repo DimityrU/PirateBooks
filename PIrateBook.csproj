@@ -71,6 +71,7 @@
     <Content Include="Bootstrap\js\bootstrap.min.js" />
     <Content Include="Bootstrap\js\jquery-3.3.1.slim.min.js" />
     <Content Include="Bootstrap\js\popper.min.js" />
+    <Content Include="css\StyleSheet.css" />
     <Content Include="DataTables\css\jquery.dataTables.min.css" />
     <Content Include="DataTables\js\jquery.dataTables.min.js" />
     <Content Include="FontAwesome\attribution.js" />
@@ -1721,10 +1722,31 @@
     <Content Include="FontAwesome\webfonts\fa-brands-400.svg" />
     <Content Include="FontAwesome\webfonts\fa-regular-400.svg" />
     <Content Include="FontAwesome\webfonts\fa-solid-900.svg" />
+    <Content Include="img\adminlogo.png" />
+    <Content Include="img\banner library.jpg" />
+    <Content Include="img\home.jpg" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\search.png" />
+    <Content Include="img\userlogo.png" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="FontAwesome\less\brands.less" />
@@ -1781,6 +1803,7 @@
     <Content Include="FontAwesome\webfonts\fa-solid-900.ttf" />
     <Content Include="FontAwesome\webfonts\fa-solid-900.woff" />
     <Content Include="FontAwesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="Home.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
