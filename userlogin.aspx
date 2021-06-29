@@ -44,11 +44,11 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <asp:Button ID="Button1" runat="server" CssClass="btn btn-success col-12 mt-5 btn-lg" Text="Login" />
+                                    <asp:Button ID="Button1" runat="server" CssClass="btn btn-success col-12 mt-3 btn-lg" Text="Login" />
                                 </div>
 
                                 <div class="form-group">
-                                    <a href="usersignup.aspx"><input id="Button2" class="btn btn-info col-12 mt-5 btn-lg" type="button" value="Sign Up" /></a>
+                                    <a href="usersignup.aspx"><input id="Button2" class="btn btn-info col-12 mt-3 btn-lg" type="button" value="Sign Up"/></a>
                                 </div>
                             </div>
                         </div>
