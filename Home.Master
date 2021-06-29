@@ -89,6 +89,7 @@
         </div>
 
         <!-- Footer -->
+        <footer>
             <div id="footer1" class="container-fluid">
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 text-center">
@@ -118,7 +119,9 @@
             <div id="footer2" class="container-fluid">
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 text-center">
-                        <p style="color:whitesmoke">&copy All right Reversed. <a class="footerlinks" href="#" target="_blank">PBooks</a></p>
+                        <p style="color:whitesmoke">&copy All right Reversed. 
+                            <a class="footerlinks" href="#" target="_blank">PBooks</a>
+                        </p>
                     </div>
                 </div>
             </div>
