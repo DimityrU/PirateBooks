@@ -89,18 +89,12 @@
         </div>
 
         <!-- Footer -->
-        <footer class="fixed-bottom">
+        <footer>
             <div id="footer1" class="container-fluid">
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 text-center">
                         <p>
                             <asp:LinkButton CssClass="footerlinks" ID="LinkButton6" runat="server">Admin Login
-                            </asp:LinkButton>&nbsp;
-
-                            <asp:LinkButton CssClass="footerlinks" ID="LinkButton7" runat="server">Author Management
-                            </asp:LinkButton>&nbsp;
-
-                            <asp:LinkButton CssClass="footerlinks" ID="LinkButton8" runat="server">Publisher Management
                             </asp:LinkButton>&nbsp;
 
                             <asp:LinkButton CssClass="footerlinks" ID="LinkButton9" runat="server">Book Inventory

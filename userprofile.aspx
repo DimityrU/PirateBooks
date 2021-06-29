@@ -112,7 +112,7 @@
 
                          <div class="form-group m-auto">
                              <center>
-                                <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary col-8 mt-3 btn-lg" Text="Sign in" />
+                                <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary col-8 mt-3 btn-lg" Text="Update" />
                             </center>
                         </div>
                     </div>
