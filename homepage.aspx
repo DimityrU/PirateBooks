@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <section>
-        <img src="img/banner1.jpg" class="img-fluid"/>
+        <img src="imgs/banner1.jpg" class="img-fluid"/>
     </section>
 
     <section>
@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <center>
-                        <img src="img/search.png" width="150px"/>
+                        <img src="imgs/search.png" width="150px"/>
                         <h4>Search Books online</h4>
                         <p>You can search for your favourite books</p>
                     </center>
@@ -29,7 +29,7 @@
                             
                 <div class="col-md-4">
                     <center>
-                        <img src="img/reading.png" width="150px"/>
+                        <img src="imgs/reading.png" width="150px"/>
                         <h4>Reading Books online</h4>
                         <p>You can read the first pages of the book you like</p>
                     </center>
@@ -37,7 +37,7 @@
                  
                 <div class="col-md-4">
                     <center>
-                        <img src="img/download.png" width="150px"/>
+                        <img src="imgs/download.png" width="150px"/>
                         <h4>Download Digital Books</h4>
                         <p>You can download your favourite books in pdf format for free</p>
                     </center>
@@ -47,7 +47,7 @@
     </section>
 
     <section>
-        <img src="img/banner2.jpg" class="img-fluid"/>
+        <img src="imgs/banner2.jpg" class="img-fluid"/>
     </section>
 
     <section>
@@ -64,7 +64,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <center>
-                        <img src="img/edit.png" width="150px"/>
+                        <img src="imgs/edit.png" width="150px"/>
                         <h4>Edit Summary in our site</h4>
                         <p>You will be able to upgrade, add or change our summaries </p>
                     </center>
@@ -72,7 +72,7 @@
                                              
                 <div class="col-md-6">
                     <center>
-                        <img src="img/add2.png" width="150px"/>
+                        <img src="imgs/add2.png" width="150px"/>
                         <h4>Add Books in our site</h4>
                         <p>Soon you will be able to add books to our collection</p>
                     </center>

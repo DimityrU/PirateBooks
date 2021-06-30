@@ -17,7 +17,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="100px" src="img/userlogo.png" />
+                           <img width="100px" src="imgs/userlogo.png" />
                         </center>
                      </div>
                   </div>

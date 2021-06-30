@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="addbooks.aspx" />
     <Content Include="adminlogin.aspx" />
     <Content Include="Bootstrap\css\bootstrap.min.css" />
     <Content Include="Bootstrap\js\bootstrap.min.js" />
@@ -1724,16 +1725,17 @@
     <Content Include="FontAwesome\webfonts\fa-regular-400.svg" />
     <Content Include="FontAwesome\webfonts\fa-solid-900.svg" />
     <Content Include="homepage.aspx" />
-    <Content Include="img\add2.png" />
-    <Content Include="img\adminlogo.png" />
-    <Content Include="img\banner2.jpg" />
-    <Content Include="img\banner1.jpg" />
-    <Content Include="img\download.png" />
-    <Content Include="img\edit.png" />
-    <Content Include="img\logo.png" />
-    <Content Include="img\reading.png" />
-    <Content Include="img\search.png" />
-    <Content Include="img\userlogo.png" />
+    <Content Include="imgs\add2.png" />
+    <Content Include="imgs\adminlogo.png" />
+    <Content Include="imgs\banner2.jpg" />
+    <Content Include="imgs\banner1.jpg" />
+    <Content Include="imgs\download.png" />
+    <Content Include="imgs\edit.png" />
+    <Content Include="imgs\logo.png" />
+    <Content Include="imgs\logo2.jpg" />
+    <Content Include="imgs\reading.png" />
+    <Content Include="imgs\search.png" />
+    <Content Include="imgs\userlogo.png" />
     <Content Include="usersmanagement.aspx" />
     <Content Include="userlogin.aspx" />
     <Content Include="userprofile.aspx" />
@@ -1741,6 +1743,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addbooks.aspx.cs">
+      <DependentUpon>addbooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addbooks.aspx.designer.cs">
+      <DependentUpon>addbooks.aspx</DependentUpon>
+    </Compile>
     <Compile Include="adminlogin.aspx.cs">
       <DependentUpon>adminlogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

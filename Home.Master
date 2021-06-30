@@ -31,7 +31,7 @@
         <div>
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="#">
-                    <img src="img/logo.png" width="30" height="30"/>
+                    <img src="imgs/logo2.jpg" class="rounded ms-1" width="50" height="50"/>
                     PirateBooks
                 </a>
 
@@ -97,7 +97,7 @@
                             <asp:LinkButton CssClass="footerlinks" ID="LinkButton6" runat="server">Admin Login
                             </asp:LinkButton>&nbsp;
 
-                            <asp:LinkButton CssClass="footerlinks" ID="LinkButton9" runat="server">Book Inventory
+                            <asp:LinkButton CssClass="footerlinks" ID="LinkButton9" runat="server">Upload Books
                             </asp:LinkButton>&nbsp;
 
                              <asp:LinkButton CssClass="footerlinks" ID="LinkButton11" runat="server">Users Management

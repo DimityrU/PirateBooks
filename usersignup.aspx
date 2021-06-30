@@ -12,7 +12,7 @@
                         <div class="row">
                         <div class="col">
                             <center>
-                                <img width="150px" src="img/userlogo.png" style="margin-bottom:40px" />
+                                <img width="150px" src="imgs/userlogo.png" style="margin-bottom:40px" />
                             </center>
                         </div>
                     </div>
@@ -78,8 +78,7 @@
                             <div class="col-md-6">
                                 <label>Country</label>
                                 <div class="form-group">
-                                    <asp:DropDownList ID="DropDownList1" CssClass="btn col-12 btn-light dropdown-toggle" runat="server">
-                                        <asp:ListItem Text="Choose a country" Value="Choose a country" />
+                                    <asp:DropDownList ID="DropDownList1" CssClass="form-control" runat="server">
                                         <asp:ListItem Text="Bulgaria" Value="Bulgaria" />
                                         <asp:ListItem Text="England" Value="England" />
                                         <asp:ListItem Text="Spain" Value="Spain" />
