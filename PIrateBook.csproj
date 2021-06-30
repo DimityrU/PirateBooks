@@ -76,6 +76,7 @@
     <Content Include="css\StyleSheet.css" />
     <Content Include="DataTables\css\jquery.dataTables.min.css" />
     <Content Include="DataTables\js\jquery.dataTables.min.js" />
+    <Content Include="findbooks.aspx" />
     <Content Include="FontAwesome\attribution.js" />
     <Content Include="FontAwesome\css\all.css" />
     <Content Include="FontAwesome\css\all.min.css" />
@@ -1756,6 +1757,13 @@
     </Compile>
     <Compile Include="adminlogin.aspx.designer.cs">
       <DependentUpon>adminlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="findbooks.aspx.cs">
+      <DependentUpon>findbooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="findbooks.aspx.designer.cs">
+      <DependentUpon>findbooks.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>
