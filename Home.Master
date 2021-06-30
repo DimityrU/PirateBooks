@@ -100,10 +100,7 @@
                             <asp:LinkButton CssClass="footerlinks" ID="LinkButton9" runat="server">Book Inventory
                             </asp:LinkButton>&nbsp;
 
-                            <asp:LinkButton CssClass="footerlinks" ID="LinkButton10" runat="server">Book Issuing
-                            </asp:LinkButton>&nbsp;
-
-                             <asp:LinkButton CssClass="footerlinks" ID="LinkButton11" runat="server">Member Management
+                             <asp:LinkButton CssClass="footerlinks" ID="LinkButton11" runat="server">Users Management
                              </asp:LinkButton>
                         </p>
                     </div>
