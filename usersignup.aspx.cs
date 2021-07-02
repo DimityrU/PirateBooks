@@ -16,6 +16,18 @@ namespace PIrateBook
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            if(checkUserExists())
+            {
+                Response.Write("<script>('This User ID is taken, try another one!')</script>");
+            }
+            else
+            {
+                signUpNewUser();
+            }
+        }
+
+        bool checkUserExists()
+        {
             try
             {
                 SqlConnection con = new SqlConnection(strcon);
@@ -24,7 +36,39 @@ namespace PIrateBook
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO users.Table " +
+                SqlCommand cmd = new SqlCommand("SELECT * from user_tbl where user_id='" + Uname.Text.Trim() + "';", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count >= 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+                return false;
+            }
+        }
+
+        void signUpNewUser()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand("INSERT INTO users_tbl " +
                     "(first_name,surname,email,date_of_birth,country,user_id,password,confirm_password,account_status)" +
                     "values(@first_name,@surname,@email,@date_of_birth,@country,@user_id,@password,@confirm_password,@account_status)", con);
                 cmd.Parameters.AddWithValue("@first_name", Name.Text.Trim());
