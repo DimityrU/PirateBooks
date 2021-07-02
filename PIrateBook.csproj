@@ -69,6 +69,10 @@
   <ItemGroup>
     <Content Include="addbooks.aspx" />
     <Content Include="adminlogin.aspx" />
+    <Content Include="App_Data\PirateBooks.mdf" />
+    <Content Include="App_Data\PirateBooks_log.ldf">
+      <DependentUpon>PirateBooks.mdf</DependentUpon>
+    </Content>
     <Content Include="Bootstrap\css\bootstrap.min.css" />
     <Content Include="Bootstrap\js\bootstrap.min.js" />
     <Content Include="Bootstrap\js\jquery-3.3.1.slim.min.js" />

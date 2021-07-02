@@ -97,7 +97,7 @@
                         </div>
 
                          <div class="form-group">
-                             <asp:Button ID="Button1" runat="server" CssClass="btn btn-info col-12 mt-5 btn-lg" Text="Sign in" />
+                             <asp:Button ID="Button1" runat="server" CssClass="btn btn-info col-12 mt-5 btn-lg" Text="Sign in" OnClick="Button1_Click" />
                         </div>
                     </div>
                 </div>
