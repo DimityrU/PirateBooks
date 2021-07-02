@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace PIrateBook
+namespace PirateBook
 {
     public partial class usersignup : System.Web.UI.Page
     {
@@ -18,7 +18,7 @@ namespace PIrateBook
         {
             if(checkUserExists())
             {
-                Response.Write("<script>('This User ID is taken, try another one!')</script>");
+                Response.Write("<script>alert('This User ID is taken, try another one!');</script>");
             }
             else
             {
@@ -36,7 +36,7 @@ namespace PIrateBook
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("SELECT * from user_tbl where user_id='" + Uname.Text.Trim() + "';", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from users_tbl where user_id='" + Uname.Text.Trim() + "';", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);

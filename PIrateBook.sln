@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PIrateBook", "PIrateBook.csproj", "{EF2A5BF5-829E-4B65-A7AA-4D9B1BDC2C47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PirateBooks", "PirateBooks.csproj", "{EF2A5BF5-829E-4B65-A7AA-4D9B1BDC2C47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

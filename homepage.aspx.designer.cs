@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace PIrateBook
+namespace PirateBook
 {
     public partial class homepage
     {

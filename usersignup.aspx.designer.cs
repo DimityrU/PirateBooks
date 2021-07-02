@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PIrateBook
+namespace PirateBook
 {
 
 

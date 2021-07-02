@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace PIrateBook
+namespace PirateBook
 {
     public partial class adminlogin : System.Web.UI.Page
     {
