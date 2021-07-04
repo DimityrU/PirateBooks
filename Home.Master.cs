@@ -117,6 +117,7 @@ namespace PirateBook
             ALogin.Visible = true;
             Upload.Visible = false;
             UserM.Visible = false;
+            Response.Redirect("homepage.aspx");
         }
     }
 }
