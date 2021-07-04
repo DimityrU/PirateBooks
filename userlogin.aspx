@@ -35,12 +35,12 @@
                             <div class="col">
                                 <label>User ID</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="User ID"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="Uname" runat="server" placeholder="User ID"></asp:TextBox>
                                 </div>
 
                                 <label>Password</label>
                                 <div class="form-group">
-                                    <asp:TextBox ID="TextBox2" CssClass="form-control" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                                    <asp:TextBox ID="Pswrd" CssClass="form-control" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
                                 </div>
 
                                 <div class="form-group">

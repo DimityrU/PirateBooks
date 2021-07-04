@@ -27,14 +27,18 @@ namespace PirateBook
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("SELECT * from admins_tbl where username='" + TextBox1.Text.Trim() + "'AND password='" + TextBox2.Text.Trim() + "'", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from admins_tbl where username='" + Uname.Text.Trim() + "'AND password='" + Pswrd.Text.Trim() + "'", con);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
                     while (dr.Read())
                     {
-                        Response.Write("<script>alert('" + dr.GetValue(0).ToString() + "');</script>");
+                        Response.Write("<script>alert('Wellcome " + dr.GetValue(2).ToString() + "!');</script>");
+                        Session["username"] = dr.GetValue(0).ToString();
+                        Session["name"] = dr.GetValue(2).ToString();
+                        Session["role"] = "admin";
                     }
+                    Response.Redirect("homepage.aspx");
                 }
                 else
                 {

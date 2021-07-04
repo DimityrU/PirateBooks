@@ -11,7 +11,57 @@ namespace PirateBook
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                if (Session["role"] == null)
+                {
+                    ULogin.Visible = true;
+                    Signup.Visible = true;
 
+                    HelloUser.Visible = false;
+                    Logout.Visible = false;
+
+                    FBooks.Visible = false;
+
+                    ALogin.Visible = true;
+                    Upload.Visible = false;
+                    UserM.Visible = false;
+                }
+                else if (Session["role"].Equals("user"))
+                {
+                    ULogin.Visible = false;
+                    Signup.Visible = false;
+
+                    HelloUser.Visible = true;
+                    HelloUser.Text = "Hello " + Session["username"].ToString();
+                    Logout.Visible = true;
+
+                    FBooks.Visible = true;
+
+                    ALogin.Visible = true;
+                    Upload.Visible = false;
+                    UserM.Visible = false;
+                }
+                else if (Session["role"].Equals("admin"))
+                {
+                    ULogin.Visible = false;
+                    Signup.Visible = false;
+
+                    HelloUser.Visible = true;
+                    HelloUser.Text = "Hello Admin";
+                    Logout.Visible = true;
+
+                    FBooks.Visible = true;
+
+                    ALogin.Visible = false;
+                    Upload.Visible = true;
+                    UserM.Visible = true;
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            
         }
 
         protected void LinkButton6_Click(object sender, EventArgs e)
@@ -47,6 +97,26 @@ namespace PirateBook
         {
             Response.Redirect("usersignup.aspx");
 
+        }
+
+        protected void Logout_Click(object sender, EventArgs e)
+        {
+            Session["username"] = "";
+            Session["name"] = "";
+            Session["role"] = "";
+            Session["status"] = "";
+
+            ULogin.Visible = true;
+            Signup.Visible = true;
+
+            HelloUser.Visible = false;
+            Logout.Visible = false;
+
+            FBooks.Visible = false;
+
+            ALogin.Visible = true;
+            Upload.Visible = false;
+            UserM.Visible = false;
         }
     }
 }
