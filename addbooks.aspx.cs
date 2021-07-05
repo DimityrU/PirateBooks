@@ -35,12 +35,28 @@ namespace PirateBook
 
         protected void Update_Click(object sender, EventArgs e)
         {
+
+            if (checkIfBookExists())
+            {
+                updateBook();
+            }
+            else
+            {
+                Response.Write("<script>alert('Book doesn't exist, try other ID!');</script>");
+            }
             updateBook();
         }
 
         protected void Delete_Click(object sender, EventArgs e)
         {
-            
+            if (checkIfBookExists())
+            {
+                deleteBook();
+            }
+            else
+            {
+                Response.Write("<script>alert('Book doesn't exist, try other ID!');</script>");
+            }
         }
 
         protected void Go_Click(object sender, EventArgs e)
@@ -57,7 +73,7 @@ namespace PirateBook
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("SELECT * from books_tbl where book_id='" + BookID.Text.Trim() + "' OR book_name='" + Name.Text.Trim() + "';", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from books_tbl where book_id= '" + BookID.Text.Trim() + "' OR book_name= '" + Name.Text.Trim() + "';", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -141,11 +157,10 @@ namespace PirateBook
 
                 if (dt.Rows.Count >= 1)
                 {
-                    char[] spliters = { ',', ' '};
                     Name.Text = dt.Rows[0]["book_name"].ToString();
                     Author.Text = dt.Rows[0]["author"].ToString();
                     Genre.ClearSelection();
-                    string[] genres = dt.Rows[0]["genre"].ToString().Trim().Split(spliters);
+                    string[] genres = dt.Rows[0]["genre"].ToString().Trim().Replace(", ", "|").Split('|');
                     for (int i = 0; i < genres.Length; i++)
                     {
                         for (int j = 0; j < Genre.Items.Count; j++)
@@ -174,6 +189,7 @@ namespace PirateBook
 
         void updateBook()
         {
+
                 try
                 {
                     string genres = "";
@@ -221,6 +237,30 @@ namespace PirateBook
                     Response.Write("<script>alert('" + ex.Message + "');</script>");
 
                 }
+        }
+
+        void deleteBook()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand("DELETE from books_tbl WHERE book_id='" + BookID.Text.Trim() + "'", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                Response.Write("<script>alert('Book Deleted Successfully');</script>");
+                GridView1.DataBind();
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+            }
+
         }
     }        
 
