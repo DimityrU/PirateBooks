@@ -1737,6 +1737,8 @@
     <Content Include="imgs\reading.png" />
     <Content Include="imgs\search.png" />
     <Content Include="imgs\userlogo.png" />
+    <Content Include="posters\logo2.jpg" />
+    <Content Include="posters\poster1.jpg" />
     <Content Include="usersmanagement.aspx" />
     <Content Include="userlogin.aspx" />
     <Content Include="userprofile.aspx" />
