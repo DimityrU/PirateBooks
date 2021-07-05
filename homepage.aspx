@@ -65,8 +65,8 @@
                 <div class="col-md-6">
                     <center>
                         <img src="imgs/edit.png" width="150px"/>
-                        <h4>Edit Summary in our site</h4>
-                        <p>You will be able to upgrade, add or change our summaries </p>
+                        <h4>Edit Description in our site</h4>
+                        <p>You will be able to upgrade, add or change our descriptions </p>
                     </center>
                 </div>
                                              

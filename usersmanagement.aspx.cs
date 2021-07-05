@@ -34,7 +34,7 @@ namespace PirateBook
 
         protected void Delete_Click(object sender, EventArgs e)
         {
-            deleteMemberByID();
+            deleteUserByID();
         }
         
 
@@ -48,24 +48,23 @@ namespace PirateBook
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("SELECT * from users_tbl where user_id='" + TextBox1.Text.Trim() + "'", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from users_tbl where user_id='" + Uname.Text.Trim() + "'", con);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
                     while (dr.Read())
                     {
-                        TextBox2.Text= dr.GetValue(3).ToString();
-                        TextBox7.Text = dr.GetValue(4).ToString();
-                        TextBox3.Text = dr.GetValue(5).ToString();
-                        TextBox4.Text = dr.GetValue(6).ToString();
-                        TextBox8.Text = dr.GetValue(7).ToString();
-                        TextBox5.Text = dr.GetValue(8).ToString();
+                        Name.Text = dr.GetValue(0).ToString();
+                        Surname.Text = dr.GetValue(1).ToString();
+                        Email.Text = dr.GetValue(2).ToString();
+                        Date.Text = dr.GetValue(3).ToString();
+                        Country.Text = dr.GetValue(4).ToString();
+                        Astatus.Text = dr.GetValue(8).ToString();
                     }
-                    Response.Redirect("homepage.aspx");
                 }
                 else
                 {
-                    Response.Write("<script>alert('Invalid id');</script>");
+                    Response.Write("<script>alert('Invalid ID');</script>");
                 }
             }
             catch (Exception ex)
@@ -82,7 +81,8 @@ namespace PirateBook
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("UPDATE * from users_tbl SET account_status='" + status + "'WHERE user_id='"+TextBox1.Text.Trim()+"'", con);
+                SqlCommand cmd = new SqlCommand("UPDATE users_tbl SET account_status='" + status + "'WHERE user_id='"+Uname.Text.Trim()+"'", con);
+                Astatus.Text = status;
                 cmd.ExecuteNonQuery();
                 con.Close();
                 GridView1.DataBind();
@@ -93,7 +93,7 @@ namespace PirateBook
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
-        bool checkIfMemberExists()
+        bool checkIfUserExists()
         {
             try
             {
@@ -103,7 +103,7 @@ namespace PirateBook
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("SELECT * from member_master_table where member_id='" + TextBox1.Text.Trim() + "';", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from users_tbl where user_id='" + Uname.Text.Trim() + "';", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -126,9 +126,9 @@ namespace PirateBook
             }
         }
 
-        void deleteMemberByID()
+        void deleteUserByID()
         {
-            if (checkIfMemberExists())
+            if (checkIfUserExists())
             {
                 try
                 {
@@ -138,11 +138,11 @@ namespace PirateBook
                         con.Open();
                     }
 
-                    SqlCommand cmd = new SqlCommand("DELETE from member_master_table WHERE member_id='" + TextBox1.Text.Trim() + "'", con);
+                    SqlCommand cmd = new SqlCommand("DELETE from users_tbl WHERE user_id='" + Uname.Text.Trim() + "'", con);
 
                     cmd.ExecuteNonQuery();
                     con.Close();
-                    Response.Write("<script>alert('Member Deleted Successfully');</script>");
+                    Response.Write("<script>alert('User Deleted Successfully');</script>");
                     clearForm();
                     GridView1.DataBind();
 
@@ -155,19 +155,19 @@ namespace PirateBook
             }
             else
             {
-                Response.Write("<script>alert('Invalid Member ID');</script>");
+                Response.Write("<script>alert('Invalid User ID');</script>");
             }
         }
 
         void clearForm()
         {
-            TextBox1.Text = "";
-            TextBox2.Text = "";
-            TextBox7.Text = "";
-            TextBox3.Text = "";
-            TextBox4.Text = "";
-            TextBox8.Text = "";
-            TextBox5.Text = "";
+            Uname.Text = "";
+            Name.Text = "";
+            Surname.Text = "";
+            Email.Text = "";
+            Date.Text = "";
+            Country.Text = "";
+            Astatus.Text = "";
         }
     }
 }
