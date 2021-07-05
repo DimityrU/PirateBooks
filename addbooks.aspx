@@ -58,7 +58,7 @@
                             <div class="form-group">
                                 <div class="input-group">
                                     <asp:TextBox CssClass="form-control rounded" ID="BookID" runat="server" placeholder="Book ID"></asp:TextBox>
-                                    <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary rounded ms-1" Text="Go" OnClick="Button1_Click" />
+                                    <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary rounded ms-1" Text="Go" OnClick="Go_Click" />
                                 </div>
                             </div>
                         </div>
@@ -139,13 +139,13 @@
 
                   <div class="row">
                       <div class="col-md-4">                        
-                        <asp:Button ID="Button4" class="btn btn-lg mt-3 col-12 btn-success" runat="server" Text="Add" OnClick="Button4_Click" />
+                        <asp:Button ID="Button4" class="btn btn-lg mt-3 col-12 btn-success" runat="server" Text="Add" OnClick="Add_Click" />
                      </div>
                       <div class="col-md-4">                        
-                        <asp:Button ID="Button3" class="btn btn-lg mt-3 col-12 btn-primary" runat="server" Text="Update" OnClick="Button3_Click" />
+                        <asp:Button ID="Button3" class="btn btn-lg mt-3 col-12 btn-primary" runat="server" Text="Update" OnClick="Update_Click" />
                      </div>
                      <div class="col-md-4">                        
-                        <asp:Button ID="Button2" class="btn btn-lg mt-3 col-12 btn-danger" runat="server" Text="Delete" OnClick="Button2_Click" />
+                        <asp:Button ID="Button2" class="btn btn-lg mt-3 col-12 btn-danger" runat="server" Text="Delete" OnClick="Delete_Click" />
                      </div>
                   </div>
 
