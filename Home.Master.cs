@@ -98,6 +98,10 @@ namespace PirateBook
             Response.Redirect("usersignup.aspx");
 
         }
+        protected void HelloUser_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("userprofile.aspx");
+        }
 
         protected void Logout_Click(object sender, EventArgs e)
         {

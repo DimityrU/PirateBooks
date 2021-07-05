@@ -112,7 +112,7 @@
 
                          <div class="form-group m-auto">
                              <center>
-                                <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary col-8 mt-3 btn-lg" Text="Update" />
+                                <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary col-8 mt-3 btn-lg" Text="Update" OnClick="Button1_Click" />
                             </center>
                         </div>
                     </div>
