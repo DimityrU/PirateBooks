@@ -178,13 +178,44 @@
                      <div class="col">
                         <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" DataKeyNames="book_id" DataSourceID="SqlDataSource1" AutoGenerateColumns="False">
                             <Columns>
-                                <asp:BoundField DataField="book_id" HeaderText="ID" ReadOnly="True" SortExpression="book_id" />
-                                <asp:BoundField DataField="book_name" HeaderText="Name" SortExpression="book_name" />
-                                <asp:BoundField DataField="genre" HeaderText="Genre" SortExpression="genre" />
-                                <asp:BoundField DataField="author" HeaderText="Author" SortExpression="author" />
-                                <asp:BoundField DataField="language" HeaderText="Language" SortExpression="language" />
-                                <asp:BoundField DataField="book_description" HeaderText="Description" SortExpression="book_description" />
-                                <asp:BoundField DataField="book_img_link" HeaderText="book_img_link" SortExpression="book_img_link" />
+                                <asp:BoundField DataField="book_id" HeaderText="ID" ReadOnly="True" SortExpression="book_id" >
+                                <ItemStyle Font-Bold="True" />
+                                </asp:BoundField>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-lg-2">
+                                                    <asp:Image CssClass="img-fluid" ID="Image1" runat="server" ImageUrl='<%# Eval("book_img_link") %>' />
+                                                </div>
+                                                <div class="col-lg-10">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("book_name") %>' Font-Bold="True" Font-Size="X-Large"></asp:Label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            Author -
+                                                            <asp:Label ID="Label2" runat="server" Text='<%# Eval("author") %>' Font-Bold="True"></asp:Label>
+                                                            &nbsp;| Genre -
+                                                            <asp:Label ID="Label3" runat="server" Text='<%# Eval("genre") %>' Font-Bold="True"></asp:Label>
+                                                            &nbsp;| Language -
+                                                            <asp:Label ID="Label4" runat="server" Text='<%# Eval("language") %>' Font-Bold="True"></asp:Label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            Description -
+                                                            <asp:Label ID="Label5" runat="server" Font-Bold="True" Text='<%# Eval("book_description") %>' Font-Italic="True"></asp:Label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
                             </Columns>
                          </asp:GridView>
                      </div>
