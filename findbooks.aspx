@@ -48,7 +48,7 @@
                   <div class="row">
                       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PirateBooksConnectionString %>" SelectCommand="SELECT * FROM [books_tbl]"></asp:SqlDataSource>
                      <div class="col">
-                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" DataKeyNames="book_id" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" onselectedindexchanged="GridView1_SelectedIndexChanged" AutoGenerateSelectButton="True">
+                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" DataKeyNames="book_id" DataSourceID="SqlDataSource1" AutoGenerateColumns="False">
                             <Columns>
                                 <asp:BoundField DataField="book_id" HeaderText="ID" ReadOnly="True" SortExpression="book_id" >
                                 <ItemStyle Font-Bold="True" />
