@@ -33,57 +33,57 @@ namespace PIrateBook
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// BookID control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox BookID;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Name control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Name;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Author control.
+        /// Label4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Author;
+        protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// Language control.
+        /// Label5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Language;
+        protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// Genre control.
+        /// Button4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox Genre;
+        protected global::System.Web.UI.WebControls.Button Button4;
 
         /// <summary>
-        /// BookDes control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox BookDes;
+        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }

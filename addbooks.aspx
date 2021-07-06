@@ -179,7 +179,6 @@
                         <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" DataKeyNames="book_id" 
                             DataSourceID="SqlDataSource1" AutoGenerateColumns="False" OnSelectedIndexChanged="Detail_Click">
                             <Columns>
-                                <asp:CommandField ShowSelectButton="True" SelectText="Detail" ButtonType="Button" />
                                 <asp:BoundField DataField="book_id" HeaderText="ID" ReadOnly="True" SortExpression="book_id" >
                                 <ItemStyle Font-Bold="True" />
                                 </asp:BoundField>
@@ -213,23 +212,12 @@
                                                             <asp:Label ID="Label5" runat="server" Font-Bold="True" Text='<%# Eval("book_description") %>' Font-Italic="True"></asp:Label>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <asp:Button class="btn btn-light" ID="Detail" OnClick="Detail_Click" runat="server" Text="Detail" />                                                            
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <asp:Button class="btn btn-light" ID="Button6" runat="server" Text="Download"  />
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <asp:Button class="btn btn-light" ID="Button7" runat="server" Text="Read" />
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-
+                                <asp:CommandField ControlStyle-CssClass="btn btn-light" ShowSelectButton="True" SelectText="Detail" ButtonType="Button" />
                             </Columns>
                          </asp:GridView>
                      </div>
