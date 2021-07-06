@@ -15,13 +15,13 @@ namespace PirateBook
     {
 
         /// <summary>
-        /// Label1 control.
+        /// AccStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label AccStatus;
 
         /// <summary>
         /// Name control.
@@ -42,13 +42,13 @@ namespace PirateBook
         protected global::System.Web.UI.WebControls.TextBox Surname;
 
         /// <summary>
-        /// TextBox4 control.
+        /// Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox Email;
 
         /// <summary>
         /// DoB control.
@@ -60,13 +60,13 @@ namespace PirateBook
         protected global::System.Web.UI.WebControls.TextBox DoB;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// Country control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList Country;
 
         /// <summary>
         /// Label2 control.
@@ -78,39 +78,39 @@ namespace PirateBook
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// TextBox1 control.
+        /// Uname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox Uname;
 
         /// <summary>
-        /// TextBox2 control.
+        /// Pswrd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox Pswrd;
 
         /// <summary>
-        /// TextBox3 control.
+        /// Npswrd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox Npswrd;
 
         /// <summary>
-        /// Button1 control.
+        /// Update control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button Update;
     }
 }

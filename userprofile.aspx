@@ -23,7 +23,7 @@
                                 <center>
                                     <h4>My Profile</h4>
                                     <span>Account Status - </span>
-                                    <asp:Label CssClass="badge badge-pill mb-2 bg-info" ID="Label1" runat="server" Text="Your Status"></asp:Label>
+                                    <asp:Label class="badge badge-pill mb-2 bg-info" ID="AccStatus" runat="server" Text="Your Status"></asp:Label>
                                 </center>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                             <div class="col-md-4">
                                 <label>Email</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Email" TextMode="Email"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="Email" runat="server" placeholder="Email" TextMode="Email"></asp:TextBox>
                                 </div>
                             </div>
 
@@ -61,7 +61,7 @@
                             <div class="col-md-6">
                                 <label>Country</label>
                                 <div class="form-group">
-                                    <asp:DropDownList ID="DropDownList1" CssClass="btn col-12 btn-light dropdown-toggle" runat="server">
+                                    <asp:DropDownList ID="Country" CssClass="btn col-12 btn-light dropdown-toggle" runat="server">
                                         <asp:ListItem Text="Choose a country" Value="Choose a country" />
                                         <asp:ListItem Text="Bulgaria" Value="Bulgaria" />
                                         <asp:ListItem Text="England" Value="England" />
@@ -93,26 +93,26 @@
                             <div class="col-md-4">
                                 <label>User ID</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Username" ReadOnly="True"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="Uname" runat="server" placeholder="Username" ReadOnly="True"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <label>Old Password</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Old Password" TextMode="SingleLine" ReadOnly="True"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="Pswrd" runat="server" placeholder="Old Password" ReadOnly="True"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <label>New Password</label>
                                 <div class="form-group">
-                                    <asp:TextBox ID="TextBox3" CssClass="form-control" runat="server" placeholder="New Password" TextMode="Password"></asp:TextBox>
+                                    <asp:TextBox ID="Npswrd" CssClass="form-control" runat="server" placeholder="New Password" TextMode="Password"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
 
                          <div class="form-group m-auto">
                              <center>
-                                <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary col-8 mt-3 btn-lg" Text="Update" OnClick="Button1_Click" />
+                                <asp:Button ID="Update" runat="server" CssClass="btn btn-primary col-8 mt-3 btn-lg" Text="Update" OnClick="Update_Click" />
                             </center>
                         </div>
                     </div>

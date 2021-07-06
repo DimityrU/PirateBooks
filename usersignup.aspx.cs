@@ -79,7 +79,7 @@ namespace PirateBook
                 cmd.Parameters.AddWithValue("@user_id", Uname.Text.Trim());
                 cmd.Parameters.AddWithValue("@confirm_password", Pswrd.Text.Trim());
                 cmd.Parameters.AddWithValue("@password", CPswrd.Text.Trim());
-                cmd.Parameters.AddWithValue("@account_status", "pending");
+                cmd.Parameters.AddWithValue("@account_status", "Pending");
 
                 cmd.ExecuteNonQuery();
                 con.Close();
