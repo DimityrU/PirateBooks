@@ -22,5 +22,10 @@ namespace PirateBook
 
             }
         }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = Convert.ToInt16(GridView1.SelectedDataKey.Value);
+        }
     }
 }
