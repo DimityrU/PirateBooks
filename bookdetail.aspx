@@ -11,15 +11,16 @@
                   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PirateBooksConnectionString %>" SelectCommand="SELECT * FROM [books_tbl]"></asp:SqlDataSource>
                   <div class="row">
                      <div class="col">
-                        <center>
-                            <asp:Label ID="Name" runat="server" Font-Bold="True" Font-Size="X-Large"></asp:Label>
+                        <center style="height: 34px">
+                            <asp:Label ID="Name" runat="server" Font-Bold="True" Font-Size="X-Large" style="font-family:Verdana"></asp:Label>
+                            <br />
                         </center>
                      </div>
                   </div>
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img id="imgview" height="180px" width="125px" class="rounded" src="posters/logo2.jpg" />
+                           &nbsp;<asp:Image ID="Cover" runat="server" Height="399px" Width="293px" />
                         </center>
                      </div>
                   </div>
@@ -32,27 +33,26 @@
 
                   <div class="row">
                       <div class="col-md-12">
-                               <h6>Author -</h6>
-                               <asp:Label ID="Author" runat="server" Font-Bold="True"></asp:Label>
+                               <h4>Author -<asp:Label ID="Author" runat="server" Font-Bold="True"></asp:Label>
+                               </h4>
+                      <div class="col-md-12">
+                               <h4>Genre -<asp:Label ID="Genre" runat="server" Font-Bold="True"></asp:Label>
+                               </h4>
+                      <div class="col-md-12">
+                               <h4>Language -<asp:Label ID="Language" runat="server" Font-Bold="True"></asp:Label>
+                               </h4>
+                               <h4>Description -&nbsp;&nbsp;
+                               <asp:Label ID="Description" runat="server" Font-Bold="True"></asp:Label>
+                               </h4>
+                      </div>
+                      </div>
                       </div>
                  </div>
                 <div class="row">
-                      <div class="col-md-12">
-                               <h6>Genre -</h6>
-                               <asp:Label ID="Genre" runat="server" Font-Bold="True"></asp:Label>
-                      </div>
                  </div>
                 <div class="row">
-                      <div class="col-md-12">
-                               <h6>Language -</h6>
-                               <asp:Label ID="Language" runat="server" Font-Bold="True"></asp:Label>
-                      </div>
                    </div>
                 <div class="row">
-                      <div class="col-md-12">
-                               <h6>Description -</h6>
-                               <asp:Label ID="Description" runat="server" Font-Bold="True"></asp:Label>
-                      </div>
                    </div>
                 <div class="row">
                       <div class="col-md-6">                        

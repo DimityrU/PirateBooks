@@ -22,5 +22,17 @@ namespace PirateBook
 
             }
         }
+        protected void Detail_Click(object sender, EventArgs e)
+        {
+            getBookId();
+            Response.Redirect("bookdetail.aspx");
+        }
+
+        void getBookId()
+        {
+            GridViewRow row = GridView1.SelectedRow;
+            string Id = (string)GridView1.DataKeys[row.RowIndex].Values["book_id"];
+            Session["BookID"] = Id;
+        }
     }
 }

@@ -48,7 +48,8 @@
                   <div class="row">
                       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PirateBooksConnectionString %>" SelectCommand="SELECT * FROM [books_tbl]"></asp:SqlDataSource>
                      <div class="col">
-                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" DataKeyNames="book_id" DataSourceID="SqlDataSource1" AutoGenerateColumns="False">
+                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" DataKeyNames="book_id" 
+                            DataSourceID="SqlDataSource1" AutoGenerateColumns="False" OnSelectedIndexChanged="Detail_Click">
                             <Columns>
                                 <asp:BoundField DataField="book_id" HeaderText="ID" ReadOnly="True" SortExpression="book_id" >
                                 <ItemStyle Font-Bold="True" />
@@ -57,6 +58,7 @@
                                     <ItemTemplate>
                                         <div class="container-fluid">
                                             <div class="row">
+                                          
                                                 <div class="col-lg-2">
                                                     <asp:Image CssClass="img-fluid" ID="Image1" runat="server" ImageUrl='<%# Eval("book_img_link") %>' />
                                                 </div>
@@ -87,7 +89,7 @@
                                         </div>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-
+                                <asp:CommandField ControlStyle-CssClass="btn btn-light" ShowSelectButton="True" SelectText="Detail" ButtonType="Button" />
                             </Columns>
                          </asp:GridView>
                      </div>

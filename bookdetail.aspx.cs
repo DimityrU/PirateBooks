@@ -31,9 +31,10 @@ namespace PIrateBook
                     {
                         Name.Text = dr.GetValue(1).ToString();
                         Author.Text = dr.GetValue(3).ToString();
-                        Genre.Text = dr.GetValue(4).ToString();
-                        Language.Text = dr.GetValue(5).ToString();
-                        Description.Text = dr.GetValue(6).ToString();
+                        Genre.Text = dr.GetValue(2).ToString();
+                        Language.Text = dr.GetValue(4).ToString();
+                        Description.Text = dr.GetValue(5).ToString();
+                        Cover.ImageUrl = dr.GetValue(6).ToString();
                     }
                 }
                 else
