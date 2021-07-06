@@ -18,7 +18,7 @@ namespace PirateBook
         {
             try
             {
-                if (Session["username"].ToString() == "" || Session["username"] == null)
+                if (Session["username"] == null || Session["username"].ToString() == "")
                 {
                     Response.Write("<script>alert('Session Expired. Please Login Again');</script>");
                     Response.Redirect("userlogin.aspx");
