@@ -18,12 +18,12 @@ namespace PirateBook
         {
             try
             {
-                if (Session["username"] == null || Session["username"].ToString() == "")
+                if (Session["username"] == null)
                 {
                     Response.Write("<script>alert('Session Expired. Please Login Again');</script>");
                     Response.Redirect("userlogin.aspx");
                 }
-                else if (Session["username"].ToString() == "none" || Session["username"].ToString() == "admin")
+                else if (Session["username"].ToString() == "admin")
                 {
                     Response.Write("<script>alert('You must be logged in as USER to view this page');</script>");
                     Response.Redirect("userlogin.aspx");
@@ -74,7 +74,6 @@ namespace PirateBook
                     con.Open();
                 }
                 SqlCommand cmd = new SqlCommand("SELECT * from users_tbl where user_id='" + Session["username"].ToString() + "';", con);
-                //cmd.Parameters.Add(new SqlParameter("@id", BookID.Text.Trim()));
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);

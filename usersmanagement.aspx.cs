@@ -15,14 +15,15 @@ namespace PirateBook
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["role"].ToString() == "admin")
-            {
-                GridView1.DataBind();
-            }
-            else
+            if (Session["role"] == null || Session["role"].ToString() == "username")
             {
                 Response.Write("<script>alert('You must be logged in as ADMIN to view this page!');</script>");
                 Response.Redirect("adminlogin.aspx");
+            }
+            else if(Session["role"].ToString() == "admin")
+            {
+                GridView1.DataBind();
+
             }
         }
 

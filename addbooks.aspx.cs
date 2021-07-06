@@ -18,15 +18,16 @@ namespace PirateBook
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (Session["role"].ToString() == "admin")
-            {
-                GridView1.DataBind();
-            }
-            else
+            /*if ( Session["role"] == null || Session["role"].ToString() == "user")
             {
                 Response.Write("<script>alert('You must be logged in as ADMIN to view this page!');</script>");
                 Response.Redirect("adminlogin.aspx");
             }
+            else if (Session["role"].ToString() == "admin")
+            {
+                GridView1.DataBind();
+            }*/
+            GridView1.DataBind();
 
         }
 
@@ -284,6 +285,19 @@ namespace PirateBook
             Genre.SelectedValue = null;
             Language.SelectedValue = null;
             BookDes.Text = "";
+        }
+
+        protected void Detail_Click(object sender, EventArgs e)
+        {
+            getBookId();
+            Response.Redirect("bookdetail.aspx");
+        }
+
+        void getBookId()
+        {
+            GridViewRow row = GridView1.SelectedRow;
+            string Id = (string)GridView1.DataKeys[row.RowIndex].Values["book_id"];
+            Session["BookID"] = Id;
         }
     }        
 
