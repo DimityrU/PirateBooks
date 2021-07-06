@@ -33,15 +33,6 @@ namespace PIrateBook
         protected global::System.Web.UI.WebControls.Label Name;
 
         /// <summary>
-        /// Cover control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Cover;
-
-        /// <summary>
         /// Author control.
         /// </summary>
         /// <remarks>
