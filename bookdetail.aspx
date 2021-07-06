@@ -12,7 +12,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("book_name") %>' Font-Bold="True" Font-Size="X-Large"></asp:Label>
+                            <asp:Label ID="Name" runat="server" Font-Bold="True" Font-Size="X-Large"></asp:Label>
                         </center>
                      </div>
                   </div>
@@ -33,33 +33,33 @@
                   <div class="row">
                       <div class="col-md-12">
                                <h6>Author -</h6>
-                               <asp:Label ID="Label2" runat="server" Text='<%# Eval("author") %>' Font-Bold="True"></asp:Label>
+                               <asp:Label ID="Author" runat="server" Font-Bold="True"></asp:Label>
                       </div>
                  </div>
                 <div class="row">
                       <div class="col-md-12">
                                <h6>Genre -</h6>
-                               <asp:Label ID="Label3" runat="server" Text='<%# Eval("genre") %>' Font-Bold="True"></asp:Label>
+                               <asp:Label ID="Genre" runat="server" Font-Bold="True"></asp:Label>
                       </div>
                  </div>
                 <div class="row">
                       <div class="col-md-12">
                                <h6>Language -</h6>
-                               <asp:Label ID="Label4" runat="server" Text='<%# Eval("language") %>' Font-Bold="True"></asp:Label>
+                               <asp:Label ID="Language" runat="server" Font-Bold="True"></asp:Label>
                       </div>
                    </div>
                 <div class="row">
                       <div class="col-md-12">
                                <h6>Description -</h6>
-                               <asp:Label ID="Label5" runat="server" Text='<%# Eval("book_description") %>' Font-Bold="True"></asp:Label>
+                               <asp:Label ID="Description" runat="server" Font-Bold="True"></asp:Label>
                       </div>
                    </div>
                 <div class="row">
                       <div class="col-md-6">                        
-                        <asp:Button ID="Button4" class="btn btn-lg mb-1 mt-3 ms-2 col-12  btn-outline-dark" runat="server" Text="Download"/>
+                        <asp:Button ID="Dwnld" class="btn btn-lg mb-1 mt-3 ms-2 col-12  btn-outline-dark" runat="server" Text="Download"/>
                      </div>
                      <div class="col-md-6">                        
-                        <asp:Button ID="Button2" class="btn btn-lg mb-1 mt-3 me-2 col-12  btn-outline-dark" runat="server" Text="Read"/>
+                        <asp:Button ID="Read" class="btn btn-lg mb-1 mt-3 me-2 col-12  btn-outline-dark" runat="server" Text="Read"/>
                      </div>
                   </div>
                </div>
