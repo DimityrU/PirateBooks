@@ -23,6 +23,11 @@ namespace PirateBook
                     Response.Write("<script>alert('Session Expired. Please Login Again');</script>");
                     Response.Redirect("userlogin.aspx");
                 }
+                else if (Session["username"].ToString() == "none" || Session["username"].ToString() == "admin")
+                {
+                    Response.Write("<script>alert('You must be logged in as USER to view this page');</script>");
+                    Response.Redirect("userlogin.aspx");
+                }
                 else
                 {
                     if (!Page.IsPostBack)

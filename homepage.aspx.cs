@@ -11,7 +11,7 @@ namespace PirateBook
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["role"] = "none";
         }
     }
 }

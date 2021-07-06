@@ -17,7 +17,17 @@ namespace PirateBook
         static string global_filepath;
         protected void Page_Load(object sender, EventArgs e)
         {
-            GridView1.DataBind();
+
+            if (Session["role"].ToString() == "admin")
+            {
+                GridView1.DataBind();
+            }
+            else
+            {
+                Response.Write("<script>alert('You must be logged in as ADMIN to view this page!');</script>");
+                Response.Redirect("adminlogin.aspx");
+            }
+
         }
 
         protected void Add_Click(object sender, EventArgs e)
@@ -30,6 +40,7 @@ namespace PirateBook
             else
             {
                 addNewBook();
+                clearForm();
             }
         }
 
@@ -44,7 +55,6 @@ namespace PirateBook
             {
                 Response.Write("<script>alert('Book doesn't exist, try other ID!');</script>");
             }
-            updateBook();
         }
 
         protected void Delete_Click(object sender, EventArgs e)
@@ -52,16 +62,19 @@ namespace PirateBook
             if (checkIfBookExists())
             {
                 deleteBook();
+                clearForm();
             }
             else
             {
                 Response.Write("<script>alert('Book doesn't exist, try other ID!');</script>");
+
             }
         }
 
         protected void Go_Click(object sender, EventArgs e)
         {
-                getBookByID();
+            getBookByID();
+
         }
         bool checkIfBookExists()
         {
@@ -261,6 +274,16 @@ namespace PirateBook
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
 
+        }
+
+        void clearForm()
+        {
+            BookID.Text = "";
+            Name.Text = "";
+            Author.Text = "";
+            Genre.SelectedValue = null;
+            Language.SelectedValue = null;
+            BookDes.Text = "";
         }
     }        
 

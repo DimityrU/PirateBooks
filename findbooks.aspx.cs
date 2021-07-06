@@ -11,7 +11,16 @@ namespace PirateBook
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["role"].ToString() == "none")
+            {
+                Response.Write("<script>alert('You must be logged in to view this page');</script>");
+                Response.Redirect("userlogin.aspx");
+            }
+            else
+            {
+                GridView1.DataBind();
 
+            }
         }
     }
 }
