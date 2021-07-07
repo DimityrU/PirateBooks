@@ -54,7 +54,16 @@ namespace PIrateBook
             }
             else
             {
-                Response.Write("<script>alert('Only ADMIN can delete rviews!');</script>");
+                getReviewId();
+                if (checkUser())
+                {
+                    deleteReview();
+                }
+                else
+                {
+                    Response.Write("<script>alert('You can only delete your reviews!');</script>");
+
+                }
             }
             GridView1.DataBind();
 
@@ -150,6 +159,40 @@ namespace PIrateBook
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
 
+        }
+
+        bool checkUser()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand("SELECT * from review_tbl where review_id= '" + 
+                    Session["ReviewID"].ToString() +"' AND user_id= '" + Session["username"].ToString() + "';", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count >= 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+                return false;
+            }
         }
 
         bool checkAdmin()

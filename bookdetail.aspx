@@ -90,7 +90,7 @@
                    <div class="row">
                      <div class="col">
                          <center>
-                            <asp:Button CssClass="btn btn-lg mb-1 mt-3 col-4  btn-outline-secondary" ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />          
+                            <asp:Button CssClass="btn btn-lg mb-1 mt-3 col-4 btn-outline-secondary" ID="Submit" runat="server" Text="Submit"  OnClick="Submit_Click" />          
                          </center>
                      </div>
                   </div>
@@ -109,7 +109,7 @@
                                 <asp:BoundField DataField="user_id" HeaderText="User ID" SortExpression="user_id" >
                                 </asp:BoundField>
                                 <asp:BoundField DataField="review" HeaderText="Review" SortExpression="review" />
-                                <asp:CommandField ControlStyle-CssClass="btn btn-outline-danger" SelectText="Delete" ButtonType="Button" ShowSelectButton="true"/>
+                                <asp:CommandField ControlStyle-CssClass="btn btn-outline-danger rounded-pill" SelectText="X" ButtonType="Button" ShowSelectButton="true"/>
                             </Columns>
                          </asp:GridView>
                      </div>
