@@ -8,7 +8,10 @@
          <div class="col-md-6 mx-auto">
             <div class="card">
                <div class="card-body">
-                  <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PirateBooksConnectionString %>" SelectCommand="SELECT * FROM [review_tbl]">
+                  <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PirateBooksConnectionString %>" SelectCommand="SELECT * FROM [review_tbl] WHERE ([book_id] = @book_id)">
+                      <SelectParameters>
+                          <asp:SessionParameter Name="book_id" SessionField="BookID" Type="String" />
+                      </SelectParameters>
                    </asp:SqlDataSource>
                   <div class="row">
                      <div class="col">
@@ -103,10 +106,10 @@
                         <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" DataKeyNames="review_id" 
                             DataSourceID="SqlDataSource1" AutoGenerateColumns="False" OnSelectedIndexChanged="Delete_Click">
                             <Columns>
-                                <asp:BoundField DataField="user_id" HeaderText="User_ID" SortExpression="user_id" >
+                                <asp:BoundField DataField="user_id" HeaderText="User ID" SortExpression="user_id" >
                                 </asp:BoundField>
-                                <asp:BoundField DataField="review_id" HeaderText="Review_id" SortExpression="review_id" ReadOnly="True" />
                                 <asp:BoundField DataField="review" HeaderText="Review" SortExpression="review" />
+                                <asp:CommandField ControlStyle-CssClass="btn btn-outline-danger rounded-pill" SelectText="X" ButtonType="Button" ShowSelectButton="true"/>
                             </Columns>
                          </asp:GridView>
                      </div>
