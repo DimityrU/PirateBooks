@@ -43,7 +43,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapsed navbar-collapse" id="navbarSupportContent">
+                <div class="collapsed navbar-collapse" id="navbarSupportedContent">
 
                     <ul class="navbar-nav me-auto">
                          <li class="nav-item active">

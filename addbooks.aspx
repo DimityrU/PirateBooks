@@ -52,6 +52,13 @@
                        </div>
                    </div>
 
+                   <div class="row">
+                       <div class="col-md-12">
+                           <label>Choose Book</label>
+                           <asp:FileUpload ID="FileUpload2" CssClass="form-control" runat="server" />
+                       </div>
+                   </div>
+
                     <div class="row">
                         <div class="col-md-4">
                             <label>Book ID</label>

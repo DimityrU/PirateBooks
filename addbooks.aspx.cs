@@ -15,6 +15,7 @@ namespace PirateBook
     {
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         static string global_filepath;
+        static string global_filepath_book;
         protected void Page_Load(object sender, EventArgs e)
         {
             if ( Session["role"] == null || Session["role"].ToString() == "user")
@@ -26,6 +27,7 @@ namespace PirateBook
             {
                 GridView1.DataBind();
             }
+
         }
 
         protected void Add_Click(object sender, EventArgs e)
@@ -130,6 +132,11 @@ namespace PirateBook
                 FileUpload1.SaveAs(Server.MapPath("posters/" + filename));
                 filepath = "~/posters/" + filename;
 
+                string filepath_book = "";
+                string filename_book = Path.GetFileName(FileUpload2.PostedFile.FileName);
+                FileUpload2.SaveAs(Server.MapPath("books/" + filename_book));
+                filepath_book = "~/books/" + filename_book;
+
                 SqlConnection con = new SqlConnection(strcon);
                 if (con.State == ConnectionState.Closed)
                 {
@@ -137,8 +144,8 @@ namespace PirateBook
                 }
 
                 SqlCommand cmd = new SqlCommand("INSERT INTO books_tbl (book_id, book_name, " +
-                    "genre, author, language, book_description, book_img_link) values(@book_id, @book_name, " +
-                    "@genre, @author, @language, @book_description, @book_img_link)", con);
+                    "genre, author, language, book_description, book_img_link, book_link) values(@book_id, @book_name, " +
+                    "@genre, @author, @language, @book_description, @book_img_link, @book_link)", con);
                 cmd.Parameters.AddWithValue("@book_id", BookID.Text.Trim());
                 cmd.Parameters.AddWithValue("@book_name", Name.Text.Trim());
                 cmd.Parameters.AddWithValue("@genre", genres);
@@ -146,6 +153,7 @@ namespace PirateBook
                 cmd.Parameters.AddWithValue("@language", Language.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@book_description", BookDes.Text.Trim());
                 cmd.Parameters.AddWithValue("@book_img_link", filepath);
+                cmd.Parameters.AddWithValue("@book_link", filepath_book);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 Response.Write("<script>alert('Book added Successfully');</script>");
@@ -190,6 +198,7 @@ namespace PirateBook
                     Language.SelectedValue = dt.Rows[0]["language"].ToString().Trim();
                     BookDes.Text = dt.Rows[0]["book_description"].ToString();
                     global_filepath = dt.Rows[0]["book_img_link"].ToString();
+                    global_filepath_book = dt.Rows[0]["book_link"].ToString();
 
                 }
                 else
@@ -228,13 +237,26 @@ namespace PirateBook
                         filepath = "~/posters/" + filename;
                     }
 
-                    SqlConnection con = new SqlConnection(strcon);
+                string filepath_book = "";
+                string filename_book = Path.GetFileName(FileUpload2.PostedFile.FileName);
+                if (filename_book == "" || filename_book == null)
+                {
+                    filepath_book = global_filepath_book;
+                }
+                else
+                {
+                    FileUpload2.SaveAs(Server.MapPath("books/" + filename_book));
+                    filepath_book = "~/books/" + filename_book;
+                }
+
+                SqlConnection con = new SqlConnection(strcon);
                     if (con.State == ConnectionState.Closed)
                     {
                         con.Open();
                     }
                     SqlCommand cmd = new SqlCommand("UPDATE books_tbl set book_name=@book_name, genre=@genre, author=@author," +
-                        "language=@language, book_description=@book_description, book_img_link=@book_img_link where book_id='" +
+                        "language=@language, book_description=@book_description, book_img_link=@book_img_link, " +
+                        "book_link=@book_link where book_id='" +
                         BookID.Text.Trim() + "'", con);
                     cmd.Parameters.AddWithValue("@book_name", Name.Text.Trim());
                     cmd.Parameters.AddWithValue("@genre", genres);
@@ -242,6 +264,7 @@ namespace PirateBook
                     cmd.Parameters.AddWithValue("@language", Language.Text.Trim());
                     cmd.Parameters.AddWithValue("@book_description", BookDes.Text.Trim());
                     cmd.Parameters.AddWithValue("@book_img_link", filepath);
+                    cmd.Parameters.AddWithValue("@book_link", filepath_book);
                     cmd.ExecuteNonQuery();
                     con.Close();
                     GridView1.DataBind();
