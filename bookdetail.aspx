@@ -60,10 +60,10 @@
                    </div>
                 <div class="row">
                       <div class="col-md-6">                        
-                        <asp:Button ID="Dwnld" class="btn btn-lg mb-1 mt-3 ms-2 col-12  btn-outline-secondary" runat="server" Text="Download"/>
+                        <asp:Button ID="Dwnld" class="btn btn-lg mb-1 mt-3 ms-2 col-12  btn-outline-secondary" runat="server" Text="Download" OnClick="Dwnld_Click"/>
                      </div>
                      <div class="col-md-6">                        
-                        <asp:Button ID="Read" class="btn btn-lg mb-1 mt-3 me-2 col-12  btn-outline-secondary" runat="server" Text="Read"/>
+                        <asp:Button ID="Read" class="btn btn-lg mb-1 mt-3 me-2 col-12  btn-outline-secondary" runat="server" Text="Read" OnClick="Read_Click"/>
                      </div>
                   </div>
                </div>
