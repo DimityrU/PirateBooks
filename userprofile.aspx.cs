@@ -54,7 +54,14 @@ namespace PirateBook
                 }
                 else
                 {
+                    if (Pswrd.Text != Npswrd.Text)
+                    {
                         updateUserDetails();
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('New password can not be the same as old password!');</script>");
+                    }
                 }
             }
             catch (Exception ex)
@@ -142,6 +149,7 @@ namespace PirateBook
                 cmd.Parameters.AddWithValue("@country", Country.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@password", password);
                 cmd.Parameters.AddWithValue("@account_status", "Pending");
+                Session["status"] = "Pending";
 
                 int result = cmd.ExecuteNonQuery();
                 con.Close();

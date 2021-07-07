@@ -41,6 +41,7 @@ namespace PIrateBook
             else
             {
                 addNewReview();
+                Reviews.Text = "";
             }
             GridView1.DataBind();
 
@@ -72,25 +73,47 @@ namespace PIrateBook
 
         protected void Read_Click(object sender, EventArgs e)
         {
-            getBookLink();
-            string FilePath = Server.MapPath(Session["PDF"].ToString());
-            WebClient User = new WebClient();
-            Byte[] FileBuffer = User.DownloadData(FilePath);
-            if (FileBuffer != null)
+            if (Session["status"] == null || Session["status"].ToString() == "Inactive")
             {
-                Response.ContentType = "application/pdf";
-                Response.AddHeader("content-length", FileBuffer.Length.ToString());
-                Response.BinaryWrite(FileBuffer);
+
+                Response.Write("<script>alert('Your Account status must be Active!');</script>");
+
             }
+            else
+            {
+                getBookLink();
+                string FilePath = Server.MapPath(Session["PDF"].ToString());
+                WebClient User = new WebClient();
+                Byte[] FileBuffer = User.DownloadData(FilePath);
+                if (FileBuffer != null)
+                {
+                    Response.ContentType = "application/pdf";
+                    Response.AddHeader("content-length", FileBuffer.Length.ToString());
+                    Response.BinaryWrite(FileBuffer);
+                }
+            }    
         }
 
         protected void Dwnld_Click(object sender, EventArgs e)
         {
-            getBookLink();
-            Response.ContentType = "Application/pdf";
-            Response.AppendHeader("Content-Disposition", "attachment; filename= " + Name.Text + ".pdf ");
-            Response.TransmitFile(Server.MapPath(Session["PDF"].ToString()));
-            Response.End();
+            if (Session["status"] == null || Session["status"].ToString() == "Pending"
+                || Session["status"].ToString() == "Inactive")
+            {
+
+                Response.Write("<script>alert('Your Account status must be ACTIVE!');</script>");
+
+            }
+            else
+            {
+                getBookLink();
+                Response.ContentType = "Application/pdf";
+                Response.AppendHeader("Content-Disposition", "attachment; filename= " + Name.Text + ".pdf ");
+                Response.TransmitFile(Server.MapPath(Session["PDF"].ToString()));
+                Response.End();
+            }
+            GridView1.DataBind();
+
+
         }
 
         void displayBook()

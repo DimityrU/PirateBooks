@@ -22,7 +22,14 @@ namespace PirateBook
             }
             else
             {
-                signUpNewUser();
+                if (Pswrd.Text == CPswrd.Text)
+                {
+                    signUpNewUser();
+                }
+                else
+                {
+                    Response.Write("<script>alert('Passwords don't match!');</script>");
+                }
             }
         }
 
