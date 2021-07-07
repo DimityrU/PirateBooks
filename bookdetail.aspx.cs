@@ -84,7 +84,7 @@ namespace PIrateBook
                 getBookLink();
                 string FilePath = Server.MapPath(Session["PDF"].ToString());
                 WebClient User = new WebClient();
-                Byte[] FileBuffer = User.DownloadData(FilePath);
+                byte[] FileBuffer = User.DownloadData(FilePath);
                 if (FileBuffer != null)
                 {
                     Response.ContentType = "application/pdf";
