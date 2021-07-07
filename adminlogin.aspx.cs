@@ -37,6 +37,8 @@ namespace PirateBook
                         Session["username"] = dr.GetValue(0).ToString();
                         Session["name"] = dr.GetValue(2).ToString();
                         Session["role"] = "admin";
+                        Session["status"] = "Active";
+
                     }
                     Response.Redirect("homepage.aspx");
                 }

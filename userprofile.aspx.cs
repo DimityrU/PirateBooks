@@ -18,12 +18,12 @@ namespace PirateBook
         {
             try
             {
-                if (Session["username"] == null)
+                if (Session["role"] == null)
                 {
                     Response.Write("<script>alert('Session Expired. Please Login Again');</script>");
                     Response.Redirect("userlogin.aspx");
                 }
-                else if (Session["username"].ToString() == "admin")
+                else if (Session["role"].ToString() == "admin")
                 {
                     Response.Write("<script>alert('You must be logged in as USER to view this page');</script>");
                     Response.Redirect("userlogin.aspx");

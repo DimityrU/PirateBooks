@@ -17,8 +17,7 @@ namespace PirateBook
         static string global_filepath;
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            /*if ( Session["role"] == null || Session["role"].ToString() == "user")
+            if ( Session["role"] == null || Session["role"].ToString() == "user")
             {
                 Response.Write("<script>alert('You must be logged in as ADMIN to view this page!');</script>");
                 Response.Redirect("adminlogin.aspx");
@@ -26,9 +25,7 @@ namespace PirateBook
             else if (Session["role"].ToString() == "admin")
             {
                 GridView1.DataBind();
-            }*/
-            GridView1.DataBind();
-
+            }
         }
 
         protected void Add_Click(object sender, EventArgs e)
@@ -76,6 +73,12 @@ namespace PirateBook
         {
             getBookByID();
 
+        }
+
+        protected void Detail_Click(object sender, EventArgs e)
+        {
+            getBookId();
+            Response.Redirect("bookdetail.aspx");
         }
         bool checkIfBookExists()
         {
@@ -146,7 +149,6 @@ namespace PirateBook
                 cmd.ExecuteNonQuery();
                 con.Close();
                 Response.Write("<script>alert('Book added Successfully');</script>");
-                //clearForm();
                 GridView1.DataBind();
             }
             catch (Exception ex)
@@ -285,12 +287,6 @@ namespace PirateBook
             Genre.SelectedValue = null;
             Language.SelectedValue = null;
             BookDes.Text = "";
-        }
-
-        protected void Detail_Click(object sender, EventArgs e)
-        {
-            getBookId();
-            Response.Redirect("bookdetail.aspx");
         }
 
         void getBookId()
