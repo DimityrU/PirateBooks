@@ -1,11 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="bookdetail.aspx.cs" Inherits="PIrateBook.bookdetail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <script type="text/javascript">
+         function newTab() {
+            window.open("pdf.aspx",);
+         }
+     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="container-fluid" style="background-color:antiquewhite">
       <div class="row">
-         <div class="col-md-6 mx-auto">
+         <div class="col-md-6 mt-1 mx-auto">
             <div class="card">
                <div class="card-body">
                   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PirateBooksConnectionString %>" SelectCommand="SELECT * FROM [review_tbl] WHERE ([book_id] = @book_id)">
@@ -13,7 +18,7 @@
                           <asp:SessionParameter Name="book_id" SessionField="BookID" Type="String" />
                       </SelectParameters>
                    </asp:SqlDataSource>
-                  <div class="row">
+                  <div class="row mb-2">
                      <div class="col">
                         <center>
                             <asp:Label ID="Name" runat="server" Font-Bold="True" Font-Size="X-Large"></asp:Label>
@@ -35,35 +40,35 @@
                   </div>
 
                   <div class="row">
-                      <div class="col-md-12">
+                      <div class="col-md-8 ms-2">
                                Author -
                                <asp:Label ID="Author" runat="server" Font-Bold="True"></asp:Label>
                       </div>
                  </div>
                 <div class="row">
-                      <div class="col-md-12">
+                      <div class="col-md-8 ms-2">
                                Genre -
                                <asp:Label ID="Genre" runat="server" Font-Bold="True"></asp:Label>
                       </div>
                  </div>
                 <div class="row">
-                      <div class="col-md-12">
+                      <div class="col-md-8 ms-2">
                                Language -
                                <asp:Label ID="Language" runat="server" Font-Bold="True"></asp:Label>
                       </div>
                    </div>
                 <div class="row">
-                      <div class="col-md-12">
-                               Description -
-                               <asp:Label ID="Description" runat="server" Font-Bold="True"></asp:Label>
+                      <div class="col-md-11 mb-2 ms-2">
+                            Description -
+                            <asp:Label ID="Description" runat="server" Font-Bold="True"></asp:Label>
                       </div>
                    </div>
                 <div class="row">
                       <div class="col-md-6">                        
-                        <asp:Button ID="Dwnld" class="btn btn-lg mb-1 mt-3 ms-2 col-12  btn-outline-secondary" runat="server" Text="Download" OnClick="Dwnld_Click"/>
+                        <asp:Button ID="Dwnld" class="btn btn-lg mt-2 mb-2 ms-5 col-10 btn-outline-secondary" runat="server" Text="Download" OnClick="Dwnld_Click"/>
                      </div>
                      <div class="col-md-6">                        
-                        <asp:Button ID="Read" class="btn btn-lg mb-1 mt-3 me-2 col-12  btn-outline-secondary" runat="server" Text="Read" OnClick="Read_Click"/>
+                        <asp:Button ID="Read" class="btn btn-lg mt-2 mb-2 col-10 btn-outline-secondary" runat="server" Text="Read" OnClick="Read_Click" OnClientClick="javascript:return newTab();"/>
                      </div>
                   </div>
                </div>

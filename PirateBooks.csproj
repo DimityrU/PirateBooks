@@ -1738,6 +1738,7 @@
     <Content Include="imgs\reading.png" />
     <Content Include="imgs\search.png" />
     <Content Include="imgs\userlogo.png" />
+    <Content Include="pdf.aspx" />
     <Content Include="posters\b1.jpg" />
     <Content Include="posters\logo2.jpg" />
     <Content Include="posters\poster1.jpg" />
@@ -1789,6 +1790,13 @@
     </Compile>
     <Compile Include="homepage.aspx.designer.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pdf.aspx.cs">
+      <DependentUpon>pdf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pdf.aspx.designer.cs">
+      <DependentUpon>pdf.aspx</DependentUpon>
     </Compile>
     <Compile Include="usersmanagement.aspx.cs">
       <DependentUpon>usersmanagement.aspx</DependentUpon>

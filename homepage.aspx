@@ -14,7 +14,7 @@
                 <div class="col-12">
                     <center>
                         <h2>Our Features</h2>
-                        <p><b>Our 2 Primary Features</b></p>
+                        <p><b>Our 3 Primary Features</b></p>
                     </center>
                 </div>
             </div>
@@ -50,36 +50,4 @@
     <section>
         <img src="imgs/banner2.jpg" class="img-fluid" />
     </section>
-
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <center>
-                        <h2>Future Features</h2>
-                        <p><b>Our Goals</b></p>
-                    </center>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <center>
-                        <img src="imgs/edit.png" width="150px" />
-                        <h4>Edit Description in our site</h4>
-                        <p>You will be able to upgrade, add or change our descriptions </p>
-                    </center>
-                </div>
-
-                <div class="col-md-6">
-                    <center>
-                        <img src="imgs/add2.png" width="150px" />
-                        <h4>Add Books in our site</h4>
-                        <p>Soon you will be able to add books to our collection</p>
-                    </center>
-                </div>
-            </div>
-        </div>
-    </section>
-
 </asp:Content>
