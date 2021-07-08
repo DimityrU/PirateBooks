@@ -34,7 +34,6 @@ namespace PIrateBook
             if (Session["status"] == null || Session["status"].ToString() == "Pending" 
                 || Session["status"].ToString() == "Inactive")
             {
-
                 Response.Write("<script>alert('Your Account status must be ACTIVE!');</script>");
                
             }
@@ -73,16 +72,7 @@ namespace PIrateBook
 
         protected void Read_Click(object sender, EventArgs e)
         {
-            if (Session["status"] == null || Session["status"].ToString() == "Inactive")
-            {
-
-                Response.Write("<script>alert('Your Account status must be Active!');</script>");
-
-            }
-            else
-            {
-                getBookLink();
-            }    
+                getBookLink();  
         }
 
         protected void Dwnld_Click(object sender, EventArgs e)

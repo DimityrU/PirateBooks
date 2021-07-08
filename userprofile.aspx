@@ -61,7 +61,7 @@
                             <div class="col-md-6">
                                 <label>Country</label>
                                 <div class="form-group">
-                                    <asp:DropDownList ID="Country" CssClass="btn col-12 btn-light dropdown-toggle" runat="server">
+                                    <asp:DropDownList ID="Country" CssClass="form-control" runat="server">
                                         <asp:ListItem Text="Choose a country" Value="Choose a country" />
                                         <asp:ListItem Text="Bulgaria" Value="Bulgaria" />
                                         <asp:ListItem Text="England" Value="England" />
