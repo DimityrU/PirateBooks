@@ -28,9 +28,11 @@ namespace PIrateBook
                 Submit.Visible = false;
                 displayBook();
                 GridView1.DataBind();
+                getBookLink();
             }
             else
             {
+                getBookLink();
                 displayBook();
                 GridView1.DataBind();
             }
@@ -77,11 +79,6 @@ namespace PIrateBook
 
         }
 
-        protected void Read_Click(object sender, EventArgs e)
-        {
-                getBookLink();  
-        }
-
         protected void Dwnld_Click(object sender, EventArgs e)
         {
             if (Session["status"] == null || Session["status"].ToString() == "Pending"
@@ -93,7 +90,6 @@ namespace PIrateBook
             }
             else
             {
-                getBookLink();
                 Response.ContentType = "Application/pdf";
                 Response.AppendHeader("Content-Disposition", "attachment; filename= " + Name.Text + ".pdf ");
                 Response.TransmitFile(Server.MapPath(Session["PDF"].ToString()));

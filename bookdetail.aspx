@@ -69,14 +69,14 @@
                         <asp:Button ID="Dwnld" class="btn btn-lg mt-2 mb-2 ms-5 col-10 btn-outline-secondary" runat="server" Text="Download" OnClick="Dwnld_Click"/>
                      </div>
                      <div class="col-md-6">                        
-                        <asp:Button ID="Read" class="btn btn-lg mt-2 mb-2 col-10 btn-outline-secondary" runat="server" Text="Read" OnClick="Read_Click" OnClientClick="javascript:return newTab();"/>
+                        <asp:Button ID="Read" class="btn btn-lg mt-2 mb-2 col-10 btn-outline-secondary" runat="server" Text="Read" OnClientClick="javascript:return newTab();"/>
                      </div>
                   </div>
                </div>
              <a href="findbooks.aspx"><< Go Back</a><br>
             <br>
 
-            <div class="card">
+            <div class="card mb-1">
                <div class="card-body">
 
                   <div class="row">
