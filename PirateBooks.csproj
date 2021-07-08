@@ -1884,6 +1884,9 @@
     <Content Include="FontAwesome\webfonts\fa-solid-900.woff" />
     <Content Include="FontAwesome\webfonts\fa-solid-900.woff2" />
     <Content Include="Home.Master" />
+    <Content Include="books\ASR.pdf" />
+    <Content Include="books\Matju Kyrbi - Ordenyt na asasinite. Potomtsi 02 - Grobnitsata na hana.pdf" />
+    <Content Include="books\Стивън Кинг - Зеленият път.pdf" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

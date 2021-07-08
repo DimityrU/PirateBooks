@@ -22,6 +22,13 @@ namespace PIrateBook
                 Response.Write("<script>alert('You must be logged in to view this page');</script>");
                 Response.Redirect("userlogin.aspx");
             }
+            else if (Session["role"].ToString() == "admin")
+            {
+                Reviews.Visible = false;
+                Submit.Visible = false;
+                displayBook();
+                GridView1.DataBind();
+            }
             else
             {
                 displayBook();

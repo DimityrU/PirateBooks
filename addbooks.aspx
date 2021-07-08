@@ -35,7 +35,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img id="imgview" height="180px" width="125px" class="rounded" src="posters/logo2.jpg" />
+                           <img id="imgview" height="180px" width="125px" class="rounded" src="posters/cover.jpg" />
                         </center>
                      </div>
                   </div>
