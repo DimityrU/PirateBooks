@@ -24,6 +24,24 @@ namespace PirateBook
         protected global::System.Web.UI.WebControls.TextBox Uname;
 
         /// <summary>
+        /// R1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator R1;
+
+        /// <summary>
+        /// R2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator R2;
+
+        /// <summary>
         /// Pswrd control.
         /// </summary>
         /// <remarks>
@@ -31,6 +49,24 @@ namespace PirateBook
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Pswrd;
+
+        /// <summary>
+        /// R3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator R3;
+
+        /// <summary>
+        /// R4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator R4;
 
         /// <summary>
         /// Button1 control.

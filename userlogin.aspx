@@ -36,11 +36,15 @@
                                 <label>User ID</label>
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="Uname" runat="server" placeholder="User ID"></asp:TextBox>
+                                    <asp:RequiredFieldValidator id="R1" runat="server" ForeColor="Red" ErrorMessage="Field is Required!" ControlToValidate="Uname"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator  id="R2" runat="server" ForeColor="Red" ErrorMessage="Unvalid format!" ControlToValidate="Uname" ValidationExpression="[A-Za-z0-9]{6,18}"></asp:RegularExpressionValidator>
                                 </div>
 
                                 <label>Password</label>
                                 <div class="form-group">
                                     <asp:TextBox ID="Pswrd" CssClass="form-control" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                                    <asp:RequiredFieldValidator id="R3" runat="server" ForeColor="Red" ErrorMessage="Field is Required!" ControlToValidate="Pswrd"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator  id="R4" runat="server" ForeColor="Red" ErrorMessage="Password must be at least 8 symbols !" ControlToValidate="Pswrd" ValidationExpression="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"></asp:RegularExpressionValidator>
                                 </div>
 
                                 <div class="form-group">
